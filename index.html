@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Recipe App — Weekly Meal Planning Made Simple</title>
+  <meta name="description" content="My Recipe App helps you discover new recipes, plan your weekly meals, and build a personalised shopping list — all in one place." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-primary:         #EA580C;
+      --color-primary-light:   #FED7AA;
+      --color-primary-surface: #FFF7ED;
+      --color-secondary:       #E11D48;
+      --color-accent:          #16A34A;
+      --color-bg:              #FFFBF5;
+      --color-surface:         #FFFFFF;
+      --color-border:          #E8E0D5;
+      --color-text-primary:    #1C1917;
+      --color-text-secondary:  #78716C;
+      --color-text-muted:      #A8A29E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 251, 245, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0 1.5rem;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 40px;
+      width: 40px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .nav-logo-text {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--color-text-primary);
+    }
+
+    .nav-contact {
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .nav-contact:hover { color: var(--color-primary); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--color-primary-surface);
+      color: var(--color-primary);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.3rem 0.875rem;
+      border-radius: 999px;
+      border: 1px solid var(--color-primary-light);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .hero-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      object-fit: cover;
+      margin: 0 auto 1.75rem;
+      display: block;
+      box-shadow: 0 8px 32px rgba(234, 88, 12, 0.18);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      background: linear-gradient(135deg, #EA580C, #E11D48);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--color-text-secondary);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-primary);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+      box-shadow: 0 4px 16px rgba(234, 88, 12, 0.3);
+    }
+
+    .hero-cta:hover {
+      background: #c2440a;
+      transform: translateY(-1px);
+    }
+
+    /* ── Features ── */
+    .features {
+      padding: 4rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .features-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .features-header h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .features-header p {
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .feature-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+      transform: translateY(-2px);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--color-primary-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9375rem;
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ── Coming Soon ── */
+    .coming-soon {
+      background: linear-gradient(135deg, #EA580C 0%, #E11D48 100%);
+      padding: 4rem 1.5rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .coming-soon-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .coming-soon h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .coming-soon p {
+      font-size: 1rem;
+      opacity: 0.88;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .store-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .store-badge:hover { background: rgba(255,255,255,0.25); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--color-border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+
+    footer a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+      .features { padding: 2.5rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="logo.jpg" alt="My Recipe App logo" />
+        <span class="nav-logo-text">My Recipe App</span>
+      </a>
+      <a href="mailto:info@myrecipeapp.co.uk" class="nav-contact">info@myrecipeapp.co.uk</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">Coming Soon</div>
+    <img src="logo.jpg" alt="My Recipe App" class="hero-logo" />
+    <h1>Weekly Meal Planning, Made Delicious</h1>
+    <p>My Recipe App takes the stress out of dinner time. Discover handpicked recipes, plan your week in minutes, and get a personalised shopping list — all in one beautifully simple app.</p>
+    <a href="mailto:info@myrecipeapp.co.uk" class="hero-cta">
+      Get in Touch
+    </a>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="features-header">
+      <h2>Everything you need for the week ahead</h2>
+      <p>From recipe discovery to your shopping trolley — we've got it covered.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🍽️</div>
+        <h3>Curated Weekly Recipes</h3>
+        <p>Receive a fresh selection of recipes every week, chosen to keep your meals varied, balanced, and exciting — without the endless scrolling.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <h3>Effortless Meal Planning</h3>
+        <p>Approve, swap, or skip recipes to build a meal plan that fits your week. Flexible enough for busy schedules, structured enough to keep you on track.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛒</div>
+        <h3>Smart Shopping Lists</h3>
+        <p>Your approved meal plan automatically generates a consolidated shopping list — organised by ingredient so your supermarket run is quick and painless.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📸</div>
+        <h3>Import Any Recipe</h3>
+        <p>Already have a recipe you love? Import it from a photo, PDF, URL, or video. My Recipe App extracts all the details so everything stays in one place.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🥗</div>
+        <h3>Filter to Your Taste</h3>
+        <p>Set dietary preferences, favourite proteins, and cuisine styles. Your weekly selection is personalised to what you and your household actually enjoy eating.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Web & Mobile</h3>
+        <p>Access your recipes and meal plans on the go. Available on iOS and via your browser — your kitchen companion wherever you are.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon -->
+  <section class="coming-soon">
+    <div class="coming-soon-inner">
+      <h2>Launching on iOS Soon</h2>
+      <p>My Recipe App is coming to the App Store. Sign up to be notified when we launch and get early access.</p>
+      <div class="store-badges">
+        <a href="mailto:info@myrecipeapp.co.uk?subject=Early Access" class="store-badge">
+          🍎 Notify Me for iOS
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 Saffer Stretch Ltd. All rights reserved.</p>
+      <p><a href="mailto:info@myrecipeapp.co.uk">info@myrecipeapp.co.uk</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
