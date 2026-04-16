@@ -183,7 +183,7 @@
     <ul>
       <li><strong>Account information</strong> — your first name, last name, and email address when you register.</li>
       <li><strong>Password</strong> — stored as a one-way bcrypt hash; we never store your plain-text password.</li>
-      <li><strong>Recipes you add</strong> — recipe titles, ingredients, instructions, and any photos you upload.</li>
+      <li><strong>Recipes you add</strong> — recipe titles, ingredients, instructions, and any photos you upload. Recipes you add are private to your account and are not visible to other users.</li>
       <li><strong>App preferences</strong> — your temperature scale (Celsius/Fahrenheit), measurement system (metric/imperial), pantry items, and meal plan settings.</li>
       <li><strong>Usage data</strong> — basic server logs (IP address, request path, timestamp) are retained by our infrastructure providers (Railway and Vercel) for up to 7 days in accordance with their standard log retention policies. We do not store additional server logs ourselves.</li>
     </ul>
@@ -197,28 +197,47 @@
       <li><strong>Compliance with legal obligations</strong> — where we are required to retain certain data by law.</li>
     </ul>
 
-    <h2>4. Who we share your data with</h2>
+    <h2>4. Cookies and tracking</h2>
+    <p>
+      We use a single, strictly necessary cookie to keep you logged in:
+    </p>
+    <ul>
+      <li><strong>rwapp_session</strong> — an HTTP-only, secure session cookie set when you log in to the web app. It contains an encrypted token that identifies your account. It expires when you log out or close your browser. No personal data is stored in the cookie itself.</li>
+    </ul>
+    <p>
+      We do not use analytics cookies, advertising trackers, third-party tracking pixels, or any other non-essential cookies. We do not use Google Analytics or similar services. Because our cookie is strictly necessary for the service to function, we rely on the "strictly necessary" exemption under the Privacy and Electronic Communications Regulations (PECR) and do not require separate cookie consent.
+    </p>
+    <p>
+      The mobile app does not use cookies. It uses a secure token stored in your device's encrypted keychain (iOS Keychain or Android Keystore).
+    </p>
+
+    <h2>5. Who we share your data with</h2>
     <p>
       We use a small number of trusted third-party services to operate the app. Each has their
       own privacy policy and terms of service which govern how they handle data:
     </p>
     <ul>
-      <li><strong>Railway</strong> (railway.app) — cloud infrastructure provider that hosts the application server. Based in the USA; covered by Standard Contractual Clauses.</li>
-      <li><strong>Neon</strong> (neon.tech) — serverless PostgreSQL database provider. Based in the USA; covered by Standard Contractual Clauses.</li>
-      <li><strong>Cloudinary</strong> (cloudinary.com) — image storage and delivery. Based in the USA; covered by Standard Contractual Clauses.</li>
-      <li><strong>Resend</strong> (resend.com) — transactional email service used to send meal plan emails and account notifications. Based in the USA; covered by Standard Contractual Clauses.</li>
-      <li><strong>Vercel</strong> (vercel.com) — web frontend hosting. Based in the USA; covered by Standard Contractual Clauses.</li>
+      <li><strong>Railway</strong> (railway.app) — cloud infrastructure provider that hosts the application server. Based in the USA.</li>
+      <li><strong>Neon</strong> (neon.tech) — serverless PostgreSQL database provider. Based in the USA.</li>
+      <li><strong>Cloudinary</strong> (cloudinary.com) — image storage and delivery. Based in the USA.</li>
+      <li><strong>Resend</strong> (resend.com) — transactional email service used to send meal plan emails and account notifications. Based in the USA.</li>
+      <li><strong>Vercel</strong> (vercel.com) — web frontend hosting. Based in the USA.</li>
     </ul>
     <p>We do not sell, rent, or trade your personal data to any third party.</p>
 
-    <h2>5. How long we keep your data</h2>
+    <h2>6. International data transfers</h2>
+    <p>
+      Your personal data is transferred to and stored in the United States by our infrastructure providers listed above. These transfers are protected by appropriate safeguards, including the UK International Data Transfer Agreement (UK IDTA) and/or Standard Contractual Clauses (SCCs) approved by the UK Information Commissioner's Office, which ensure your data receives an equivalent level of protection to that provided under UK law.
+    </p>
+
+    <h2>7. How long we keep your data</h2>
     <ul>
       <li><strong>Account and recipe data</strong> — kept for as long as your account is active.</li>
       <li><strong>Deleted accounts</strong> — when you delete your account (via the app's Profile screen), all your personal data, recipes, and uploaded images are permanently deleted from our systems and Cloudinary within minutes. Any remaining server logs held by our infrastructure providers are purged within 7 days.</li>
       <li><strong>Server logs</strong> — retained by our infrastructure providers for up to 7 days then automatically deleted.</li>
     </ul>
 
-    <h2>6. Your rights under UK GDPR</h2>
+    <h2>8. Your rights under UK GDPR</h2>
     <p>You have the following rights regarding your personal data:</p>
     <ul>
       <li><strong>Right of access</strong> — you can request a copy of the personal data we hold about you.</li>
@@ -227,6 +246,7 @@
       <li><strong>Right to restrict processing</strong> — you can ask us to pause processing of your data in certain circumstances.</li>
       <li><strong>Right to data portability</strong> — you can request your data in a machine-readable format.</li>
       <li><strong>Right to object</strong> — you can object to processing based on legitimate interests.</li>
+      <li><strong>Right to withdraw consent</strong> — where processing is based on consent, you can withdraw it at any time by deleting your account. Withdrawal does not affect the lawfulness of processing carried out before you withdrew consent. Please note that deleting your account means you will no longer be able to use the service.</li>
     </ul>
     <p>
       To exercise any of these rights, email us at
@@ -234,29 +254,50 @@
       We will respond within one calendar month.
     </p>
 
-    <h2>7. Security</h2>
+    <h2>9. Automated decision-making</h2>
+    <p>
+      We do not use automated decision-making or profiling that produces legal or similarly significant effects on you. Our meal plan generator uses simple randomisation to suggest recipes; it does not profile you or make decisions that affect your rights.
+    </p>
+
+    <h2>10. Security</h2>
     <p>
       We take reasonable technical and organisational steps to protect your data, including:
-      encrypted HTTPS connections for all data in transit, bcrypt password hashing, and
-      HTTP-only session cookies. No method of transmission over the internet is 100% secure,
-      but we take data security seriously and regularly review our practices.
+      encrypted HTTPS connections for all data in transit, bcrypt password hashing, HTTP-only
+      session cookies on the web, and encrypted keychain storage on mobile devices. No method
+      of transmission over the internet is 100% secure, but we take data security seriously
+      and regularly review our practices.
     </p>
 
-    <h2>8. Children</h2>
+    <h2>11. Data breach notification</h2>
     <p>
-      My Recipe App is not directed at children under 13. We do not knowingly collect personal
-      data from children. If you believe a child has provided us with their data, please contact
-      us and we will delete it promptly.
+      In the event of a personal data breach that poses a risk to your rights and freedoms, we will notify the UK Information Commissioner's Office within 72 hours of becoming aware of the breach, as required by UK GDPR. If the breach is likely to result in a high risk to you, we will also notify you directly by email without undue delay.
     </p>
 
-    <h2>9. Changes to this policy</h2>
+    <h2>12. Children</h2>
+    <p>
+      My Recipe App is not directed at children under 16. We do not knowingly collect personal
+      data from anyone under the age of 16. If you believe a child has provided us with their
+      data, please contact us and we will delete it promptly.
+    </p>
+
+    <h2>13. Third-party links</h2>
+    <p>
+      Our app may display recipes sourced from third-party websites and may include links to those sites. We are not responsible for the privacy practices or content of any third-party websites. We encourage you to read the privacy policy of any external site you visit.
+    </p>
+
+    <h2>14. Mobile app</h2>
+    <p>
+      The My Recipe App mobile application uses secure token-based authentication (JWT) rather than cookies. Authentication tokens are stored in your device's encrypted keychain (iOS Keychain or Android Keystore) and are transmitted via HTTPS only. The mobile app does not collect location data, device identifiers, advertising identifiers, or push notification tokens.
+    </p>
+
+    <h2>15. Changes to this policy</h2>
     <p>
       We may update this policy from time to time. If the changes are significant, we will notify
       you by email at the address registered to your account. The date at the top of this page
       will always reflect when the policy was last revised.
     </p>
 
-    <h2>10. Right to complain</h2>
+    <h2>16. Right to complain</h2>
     <p>
       If you are unhappy with how we handle your personal data, you have the right to lodge a
       complaint with the UK Information Commissioner's Office (ICO):
@@ -268,7 +309,7 @@
     <p>We would appreciate the chance to address any concerns before you contact the ICO, so
     please reach out to us first.</p>
 
-    <h2>11. Contact</h2>
+    <h2>17. Contact</h2>
     <p>
       For any privacy-related questions or to exercise your rights, contact us at:<br />
       <a href="mailto:info@myrecipeapp.co.uk">info@myrecipeapp.co.uk</a>
@@ -276,7 +317,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 My Recipe App &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy Policy</a></p>
+    <p>&copy; 2025 My Recipe App &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms of Service</a></p>
   </footer>
 
 </body>
