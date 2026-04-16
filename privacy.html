@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — My Recipe App</title>
+  <meta name="description" content="Privacy Policy for My Recipe App." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-primary:         #EA580C;
+      --color-primary-light:   #FED7AA;
+      --color-primary-surface: #FFF7ED;
+      --color-bg:              #FFFBF5;
+      --color-surface:         #FFFFFF;
+      --color-border:          #E8E0D5;
+      --color-text-primary:    #1C1917;
+      --color-text-secondary:  #78716C;
+      --color-text-muted:      #A8A29E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 251, 245, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0 1.5rem;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .nav-back {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--color-primary); }
+
+    /* ── Content ── */
+    .page-wrap {
+      max-width: 760px;
+      margin: 3rem auto 6rem;
+      padding: 0 1.5rem;
+    }
+
+    .page-wrap h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .page-wrap h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-wrap p {
+      color: var(--color-text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .page-wrap ul, .page-wrap ol {
+      color: var(--color-text-secondary);
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .page-wrap li {
+      margin-bottom: 0.4rem;
+    }
+
+    .page-wrap a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    .page-wrap a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: var(--color-primary-surface);
+      border: 1px solid var(--color-primary-light);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      font-size: 0.8rem;
+    }
+    footer a { color: var(--color-text-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-primary); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">My Recipe App</a>
+      <a href="/" class="nav-back">&#8592; Back to home</a>
+    </div>
+  </nav>
+
+  <main class="page-wrap">
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: April 2025</p>
+
+    <div class="highlight-box">
+      We keep this policy simple and in plain English. If you have any questions, email us at
+      <a href="mailto:russelince@googlemail.com">russelince@googlemail.com</a>.
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>
+      My Recipe App is operated by Russel Ince, based in the United Kingdom. References to
+      "we", "us" or "our" in this policy mean My Recipe App and its operator.
+    </p>
+    <p>
+      For the purposes of UK GDPR, Russel Ince is the data controller. You can contact us at
+      <a href="mailto:russelince@googlemail.com">russelince@googlemail.com</a>.
+    </p>
+
+    <h2>2. What personal data we collect</h2>
+    <p>We collect only the minimum data needed to run the service:</p>
+    <ul>
+      <li><strong>Account information</strong> — your first name, last name, and email address when you register.</li>
+      <li><strong>Password</strong> — stored as a one-way bcrypt hash; we never store your plain-text password.</li>
+      <li><strong>Recipes you add</strong> — recipe titles, ingredients, instructions, and any photos you upload.</li>
+      <li><strong>App preferences</strong> — your temperature scale (Celsius/Fahrenheit), measurement system (metric/imperial), pantry items, and meal plan settings.</li>
+      <li><strong>Usage data</strong> — basic server logs (IP address, request path, timestamp) retained for up to 30 days for security and debugging purposes.</li>
+    </ul>
+    <p>We do not collect payment information, location data, or device identifiers.</p>
+
+    <h2>3. Why we collect it and our legal basis</h2>
+    <p>Under UK GDPR we rely on the following legal bases:</p>
+    <ul>
+      <li><strong>Contract performance</strong> — to create and manage your account, send you weekly meal plan emails, and operate the core features of the app.</li>
+      <li><strong>Legitimate interests</strong> — to keep the service secure, diagnose bugs, and improve the app. We have balanced these interests against your rights and concluded they do not override them.</li>
+      <li><strong>Compliance with legal obligations</strong> — where we are required to retain certain data by law.</li>
+    </ul>
+
+    <h2>4. Who we share your data with</h2>
+    <p>
+      We use a small number of trusted third-party services to operate the app. Each acts as
+      a data processor on our behalf and is contractually bound to handle your data securely:
+    </p>
+    <ul>
+      <li><strong>Railway</strong> (railway.app) — cloud infrastructure provider that hosts the application server. Based in the USA; covered by Standard Contractual Clauses.</li>
+      <li><strong>Neon</strong> (neon.tech) — serverless PostgreSQL database provider. Based in the USA; covered by Standard Contractual Clauses.</li>
+      <li><strong>Cloudinary</strong> (cloudinary.com) — image storage and delivery. Based in the USA; covered by Standard Contractual Clauses.</li>
+      <li><strong>Resend</strong> (resend.com) — transactional email service used to send meal plan emails and account notifications. Based in the USA; covered by Standard Contractual Clauses.</li>
+      <li><strong>Vercel</strong> (vercel.com) — web frontend hosting. Based in the USA; covered by Standard Contractual Clauses.</li>
+    </ul>
+    <p>We do not sell, rent, or trade your personal data to any third party.</p>
+
+    <h2>5. How long we keep your data</h2>
+    <ul>
+      <li><strong>Account and recipe data</strong> — kept for as long as your account is active.</li>
+      <li><strong>Deleted accounts</strong> — when you delete your account (via the app's Profile screen), all your personal data, recipes, and uploaded images are permanently deleted from our systems and Cloudinary within minutes. Server logs referencing your activity are purged within 30 days.</li>
+      <li><strong>Server logs</strong> — retained for up to 30 days then automatically deleted.</li>
+    </ul>
+
+    <h2>6. Your rights under UK GDPR</h2>
+    <p>You have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right of access</strong> — you can request a copy of the personal data we hold about you.</li>
+      <li><strong>Right to rectification</strong> — you can correct inaccurate data via the Profile screen in the app at any time.</li>
+      <li><strong>Right to erasure ("right to be forgotten")</strong> — you can permanently delete your account and all associated data directly within the app (Profile &rarr; Delete Account), or by emailing us.</li>
+      <li><strong>Right to restrict processing</strong> — you can ask us to pause processing of your data in certain circumstances.</li>
+      <li><strong>Right to data portability</strong> — you can request your data in a machine-readable format.</li>
+      <li><strong>Right to object</strong> — you can object to processing based on legitimate interests.</li>
+    </ul>
+    <p>
+      To exercise any of these rights, email us at
+      <a href="mailto:russelince@googlemail.com">russelince@googlemail.com</a>.
+      We will respond within one calendar month.
+    </p>
+
+    <h2>7. Security</h2>
+    <p>
+      We take reasonable technical and organisational steps to protect your data, including:
+      encrypted HTTPS connections for all data in transit, bcrypt password hashing, and
+      HTTP-only session cookies. No method of transmission over the internet is 100% secure,
+      but we take data security seriously and regularly review our practices.
+    </p>
+
+    <h2>8. Children</h2>
+    <p>
+      My Recipe App is not directed at children under 13. We do not knowingly collect personal
+      data from children. If you believe a child has provided us with their data, please contact
+      us and we will delete it promptly.
+    </p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>
+      We may update this policy from time to time. When we do, we will update the "last updated"
+      date at the top of this page. If the changes are significant, we will notify you by email.
+    </p>
+
+    <h2>10. Right to complain</h2>
+    <p>
+      If you are unhappy with how we handle your personal data, you have the right to lodge a
+      complaint with the UK Information Commissioner's Office (ICO):
+    </p>
+    <ul>
+      <li>Website: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a></li>
+      <li>Phone: 0303 123 1113</li>
+    </ul>
+    <p>We would appreciate the chance to address any concerns before you contact the ICO, so
+    please reach out to us first.</p>
+
+    <h2>11. Contact</h2>
+    <p>
+      For any privacy-related questions or to exercise your rights, contact us at:<br />
+      <a href="mailto:russelince@googlemail.com">russelince@googlemail.com</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Recipe App &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
